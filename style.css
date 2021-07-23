@@ -1,0 +1,107 @@
+/* Variables */
+:root{
+    /* Primary */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    /* Neutral */
+    --dark-gray: hsla(0, 0%, 59%, 0.226);
+    --white: #FFF;
+}
+/* Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 62.5%;
+}
+main{
+    min-height: 100vh;
+    background-color: var(--dark-cyan);
+    background-image: url(images/bg-pattern-top.svg),url(images/bg-pattern-bottom.svg);
+    background-position: -75rem -60rem,15rem 30rem;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-grayish-blue);
+    font-size: 1.2rem;
+}
+span{
+    color: var(--dark-grayish-blue);
+    font-weight: 400;
+}
+p{
+    margin: 1rem;
+}
+h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--very-dark-desaturated-blue);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    border-radius: 2rem;
+    overflow: hidden;
+    width: 32rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 0rem 0rem 10rem 0.1rem hsla(227, 10%, 46%, 0.527);
+}
+.bg-container{
+    background-image: url(images/bg-pattern-card.svg);
+    background-size: cover;
+    height: 13rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+.info{
+    width: 100%;
+    border-bottom: 0.1rem solid var(--dark-gray);
+    z-index: 10;
+    margin-top: 7rem;
+    padding-bottom: 1rem;
+}
+.info p{
+    font-size: 1.4rem;
+}
+.icon{
+    border-radius: 50%;
+    width: 12rem;
+    border: solid 0.5rem var(--white);
+    margin-bottom: 1rem;
+}
+.stats{
+    margin: 2rem;
+    margin-top: 3rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.attribution{
+    color: var(--very-dark-desaturated-blue);
+    margin: 1rem;
+}
+.attribution a{
+    color: #FFF;
+}
+/* Responsive */
+@media screen and (min-width: 1440px) {
+    main{
+        background-position: -50% -50rem,150% 50rem;
+    }
+    .container{
+        width: 35rem;
+    }
+}
